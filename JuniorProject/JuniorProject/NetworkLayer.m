@@ -89,6 +89,7 @@
             [theStream close];
             [theStream removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
             theStream = nil;
+			NSLog(@"Stream closed");
 			
 			break;
 		default:
@@ -115,46 +116,6 @@
 -(void)getTank2WaterLevel
 {
 	[self sendMessage:@"GetWaterLevel2:"];
-}
-
--(void)setTank1WaterLevel:(WATER_LEVELS)level
-{
-	[self sendTank:1 WaterLevel:level];
-}
-
--(void)setTank2WaterLevel:(WATER_LEVELS)level
-{
-	[self sendTank:2 WaterLevel:level];
-}
-
--(void)sendTank:(int)tank WaterLevel:(WATER_LEVELS)level
-{
-	NSString* message;
-	
-	switch (level)
-	{
-		case 0:
-			message = [NSString stringWithFormat:@"SetWaterLevel%d:Full:", tank];
-			break;
-			
-		case 1:
-			message = [NSString stringWithFormat:@"SetWaterLevel%d:Half:", tank];
-			break;
-			
-		case 2:
-			message = [NSString stringWithFormat:@"SetWaterLevel%d:Quarter:", tank];
-			break;
-			
-		case 3:
-			message = [NSString stringWithFormat:@"SetWaterLevel%d:Danger:", tank];
-			break;
-			
-		default:
-			message = @"Error";
-			break;
-	}
-	
-	[self sendMessage:message];
 }
 
 @end

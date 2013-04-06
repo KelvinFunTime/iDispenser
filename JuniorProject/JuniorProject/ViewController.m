@@ -20,7 +20,6 @@ static int lastContainer = 1;
 - (void)viewDidUnload
 {
 	[super viewDidUnload];
-	[self setTestSegment:nil];
 	[self setLevelView:nil];
 	[[NetworkLayer sharedSingleton] setDelegate:nil];
 }
@@ -29,54 +28,12 @@ static int lastContainer = 1;
 {
 	[super viewDidAppear:animated];
 	[[NetworkLayer sharedSingleton] setDelegate:self];
+	[self getWaterLevel];
 }
 
 -(IBAction)refreshLevel:(id)sender
 {
 	[self getWaterLevel];
-}
-
--(IBAction)segmentChanged:(id)sender
-{
-	UISegmentedControl* seg = (UISegmentedControl*)sender;
-	
-	switch (seg.selectedSegmentIndex)
-	{
-		case 0:
-			if(self.view.tag == 1)
-				[[NetworkLayer sharedSingleton] setTank1WaterLevel:FULL];
-			else if(self.view.tag == 2)
-				[[NetworkLayer sharedSingleton] setTank2WaterLevel:FULL];
-			break;
-
-		case 1:
-			if(self.view.tag == 1)
-				[[NetworkLayer sharedSingleton] setTank1WaterLevel:HALF];
-			else if(self.view.tag == 2)
-				[[NetworkLayer sharedSingleton] setTank2WaterLevel:HALF];
-			break;
-			
-		case 2:
-			if(self.view.tag == 1)
-				[[NetworkLayer sharedSingleton] setTank1WaterLevel:QUARTER];
-			else if(self.view.tag == 2)
-				[[NetworkLayer sharedSingleton] setTank2WaterLevel:QUARTER];
-			break;
-			
-		case 3:
-			if(self.view.tag == 1)
-				[[NetworkLayer sharedSingleton] setTank1WaterLevel:DANGER];
-			else if(self.view.tag == 2)
-				[[NetworkLayer sharedSingleton] setTank2WaterLevel:DANGER];
-			break;
-			
-		default:
-			if(self.view.tag == 1)
-				[[NetworkLayer sharedSingleton] setTank1WaterLevel:FULL];
-			else if(self.view.tag == 2)
-				[[NetworkLayer sharedSingleton] setTank2WaterLevel:FULL];
-			break;
-	}
 }
 
 - (void)getWaterLevel

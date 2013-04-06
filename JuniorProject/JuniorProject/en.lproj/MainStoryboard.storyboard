@@ -21,7 +21,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" id="85a-TZ-AJM">
-                                                <rect key="frame" x="0.0" y="102" width="160" height="198"/>
+                                                <rect key="frame" x="0.0" y="15" width="160" height="285"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" red="0.0" green="0.75503141983695654" blue="0.74613061405178749" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
@@ -35,7 +35,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Liquid Level - Tank 1" id="aAr-lL-AOj">
+                                    <navigationItem title="Liquid Level" id="aAr-lL-AOj">
                                         <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="Z4x-vS-ABP">
                                             <connections>
                                                 <action selector="refreshLevel:" destination="2" id="Ogi-lO-XNh"/>
@@ -44,19 +44,13 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="a3M-4B-qOD">
-                                <rect key="frame" x="16" y="368" width="284" height="44"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="This is the aproximate liquid level in tank 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nOi-2G-9rR">
+                                <rect key="frame" x="14" y="86" width="113" height="265"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="100"/>
-                                    <segment title="50"/>
-                                    <segment title="25"/>
-                                    <segment title="!!!"/>
-                                </segments>
-                                <connections>
-                                    <action selector="segmentChanged:" destination="2" eventType="valueChanged" id="Of3-jk-Yvu"/>
-                                </connections>
-                            </segmentedControl>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.70397418478260865" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -64,7 +58,6 @@
                     <tabBarItem key="tabBarItem" title="Tank 1" id="e3I-fd-Zgi"/>
                     <connections>
                         <outlet property="levelView" destination="85a-TZ-AJM" id="VQ0-iT-PQL"/>
-                        <outlet property="testSegment" destination="a3M-4B-qOD" id="PT2-OL-s21"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -189,7 +182,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" id="OfW-OG-RzU">
-                                                <rect key="frame" x="0.0" y="97" width="160" height="203"/>
+                                                <rect key="frame" x="0.0" y="15" width="160" height="285"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" red="0.0" green="0.75503141979999999" blue="0.74613061410000003" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
@@ -212,19 +205,13 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="ksG-hX-BHy">
-                                <rect key="frame" x="18" y="348" width="284" height="44"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="This is the aproximate liquid level in tank 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CBp-un-Esp">
+                                <rect key="frame" x="14" y="86" width="113" height="265"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="100"/>
-                                    <segment title="50"/>
-                                    <segment title="25"/>
-                                    <segment title="!!!"/>
-                                </segments>
-                                <connections>
-                                    <action selector="segmentChanged:" destination="gVu-Jc-toM" eventType="valueChanged" id="ANA-FS-gfm"/>
-                                </connections>
-                            </segmentedControl>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.70397418479999996" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -232,7 +219,6 @@
                     <tabBarItem key="tabBarItem" title="Tank 2" id="P10-rs-qU7"/>
                     <connections>
                         <outlet property="levelView" destination="OfW-OG-RzU" id="OnF-5g-TxO"/>
-                        <outlet property="testSegment" destination="ksG-hX-BHy" id="gS8-HU-ZYt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rS2-U8-ECe" sceneMemberID="firstResponder"/>
@@ -245,9 +231,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
                 <relationship kind="action" name="refreshLevel:"/>
-                <relationship kind="action" name="segmentChanged:"/>
                 <relationship kind="outlet" name="levelView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="testSegment" candidateClass="UISegmentedControl"/>
             </relationships>
         </class>
     </classes>

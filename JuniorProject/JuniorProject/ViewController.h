@@ -11,10 +11,8 @@
 
 @interface ViewController : UIViewController <NetworkDelegate>
 
-@property (weak, nonatomic) IBOutlet UISegmentedControl *testSegment;
 @property (weak, nonatomic) IBOutlet UIView* levelView;
 
--(IBAction)segmentChanged:(id)sender;
 -(IBAction)refreshLevel:(id)sender;
 
 @end
