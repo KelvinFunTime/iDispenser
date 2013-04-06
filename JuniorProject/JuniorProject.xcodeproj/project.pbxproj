@@ -16,6 +16,7 @@
 		8A417F8B16D179A6002D3C99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A417F8A16D179A6002D3C99 /* AppDelegate.m */; };
 		8A417F8E16D179A6002D3C99 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A417F8C16D179A6002D3C99 /* MainStoryboard.storyboard */; };
 		8A417F9116D179A6002D3C99 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A417F9016D179A6002D3C99 /* ViewController.m */; };
+		8A62C84F16F69308006F0DA7 /* NetworkLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A62C84E16F69308006F0DA7 /* NetworkLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		8A417F8D16D179A6002D3C99 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8A417F8F16D179A6002D3C99 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8A417F9016D179A6002D3C99 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8A62C84D16F69308006F0DA7 /* NetworkLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
+		8A62C84E16F69308006F0DA7 /* NetworkLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				8A417F8F16D179A6002D3C99 /* ViewController.h */,
 				8A417F9016D179A6002D3C99 /* ViewController.m */,
 				8A417F8116D179A6002D3C99 /* Supporting Files */,
+				8A62C84D16F69308006F0DA7 /* NetworkLayer.h */,
+				8A62C84E16F69308006F0DA7 /* NetworkLayer.m */,
 			);
 			path = JuniorProject;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 				8A417F8716D179A6002D3C99 /* main.m in Sources */,
 				8A417F8B16D179A6002D3C99 /* AppDelegate.m in Sources */,
 				8A417F9116D179A6002D3C99 /* ViewController.m in Sources */,
+				8A62C84F16F69308006F0DA7 /* NetworkLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,8 +208,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kelvin McDonald (SZM9ET28J9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kelvin McDonald (SZM9ET28J9)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -220,6 +226,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -234,8 +241,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kelvin McDonald (SZM9ET28J9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kelvin McDonald (SZM9ET28J9)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -246,6 +253,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -254,12 +262,14 @@
 		8A417F9516D179A6002D3C99 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kelvin McDonald (SZM9ET28J9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kelvin McDonald (SZM9ET28J9)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JuniorProject/JuniorProject-Prefix.pch";
 				INFOPLIST_FILE = "JuniorProject/JuniorProject-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -267,12 +277,14 @@
 		8A417F9616D179A6002D3C99 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kelvin McDonald (SZM9ET28J9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kelvin McDonald (SZM9ET28J9)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JuniorProject/JuniorProject-Prefix.pch";
 				INFOPLIST_FILE = "JuniorProject/JuniorProject-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

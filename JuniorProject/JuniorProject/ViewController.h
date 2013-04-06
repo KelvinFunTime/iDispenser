@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NetworkLayer.h"
 
-@interface ViewController : UIViewController <NSStreamDelegate>
-
-@property (nonatomic, strong) NSInputStream *inputStream;
-@property (nonatomic, strong) NSOutputStream *outputStream;
+@interface ViewController : UIViewController <NetworkDelegate>
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *testSegment;
 @property (weak, nonatomic) IBOutlet UIView* levelView;
