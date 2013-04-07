@@ -44,7 +44,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-	//[[NetworkLayer sharedSingleton] initNetworkCommunication];
+	[[NetworkLayer sharedSingleton] initNetworkCommunication];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
